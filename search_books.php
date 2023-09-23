@@ -66,6 +66,20 @@ $result = $db->query($query);
                 <tr>
                     <td>
                         <div>
+                            <label for="isbn">ISBN:</label>
+                            <input type="text" name="isbn" id="isbn">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <label for="title">Title:</label>
+                            <textarea name="title" id="title" style="width: 200px; height: 84px;"></textarea>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
                             <?php
                                 $query1 = "SELECT * FROM categories";
                                 $result1 = $db->query($query1);
@@ -85,25 +99,11 @@ $result = $db->query($query);
                             ?>
                         </div>
                     </td>
-        
-                    <td>
-                        <div>
-                            <label for="isbn">ISBN:</label>
-                            <input type="text" name="isbn" id="isbn">
-                        </div>
-                    </td>
 
                     <td>
                         <div>
                             <label for="author">Author:</label>
                             <input type="text" name="author" id="author">
-                        </div>
-                    </td>
-
-                    <td>
-                        <div>
-                            <label for="title">Title:</label>
-                            <textarea name="title" id="title" style="width: 200px; height: 84px;"></textarea>
                         </div>
                     </td>
                         
@@ -136,7 +136,7 @@ $result = $db->query($query);
             while ($row = $result->fetch_object()) {
                 echo '<tr>';
                 echo '<td>' . $row->isbn . '</td>';
-                echo '<td>' . $row->title . '</td>';
+                echo '<td>' . $row->title . '  <a class="btn btn-success btn-sm" href="detail_books.php?isbn=' . $row->isbn . '"><i class="bi bi-box-arrow-right"></i></a></td>';
                 echo '<td>' . $row->name . '</td>';
                 echo '<td>' . $row->author . '</td>';
                 echo '<td>' . $row->price . '</td>';
@@ -153,7 +153,7 @@ $result = $db->query($query);
         ?>
 
     <br>
-    <a href="view_books.php" class="btn btn-primary mb-4"><i class="bi bi-caret-left-fill"></i>&nbsp;Back</a>
+    <a href="view_books.php" class="btn btn-secondary mb-4"><i class="bi bi-caret-left-fill"></i>&nbsp;Back</a>
     </div>
 </div>
 <?php include('./footer.php') ?>
