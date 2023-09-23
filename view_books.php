@@ -6,6 +6,7 @@
         <div class="card-header">Books Data</div>
         <div class="card-body">
             <a href="add_books.php" class="btn btn-primary mb-4">+ Add Books Data</a>
+            <a href="order_books.php" class="btn btn-primary mb-4">Order Books</a>
             <br>
             <table class="table table-striped">
                 <tr>
