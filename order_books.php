@@ -88,6 +88,7 @@ $result = $db->query($query);
             }
 
             echo '</table>';
+            echo 'Total Rows = ' . $result->num_rows;
         } else {
             echo 'No results found.';
         }
