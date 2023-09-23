@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        header('Location: login.php');
+    }
+
     include('./header.php') 
 ?>
 
@@ -6,7 +11,7 @@
         <div class="card-header">Books Data</div>
         <div class="card-body">
             <a href="add_books.php" class="btn btn-primary mb-4">+ Add Books Data</a>
-            <a href="order_books.php" class="btn btn-primary mb-4">Order Books</a>
+            <a href="logout.php" class="btn btn-danger mb-4">Logout</a>
             <br>
             <table class="table table-striped">
                 <tr>
