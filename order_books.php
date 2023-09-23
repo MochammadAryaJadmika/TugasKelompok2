@@ -59,7 +59,7 @@ $result = $db->query($query);
                 </div>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary">Filter Data</button>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-filter-square"></i>&nbsp;Filter Data</button>
             <!-- <hr> -->
         </form>
         
@@ -88,7 +88,6 @@ $result = $db->query($query);
             }
 
             echo '</table>';
-            echo 'Total Rows = ' . $result->num_rows;
         } else {
             echo 'No results found.';
         }
@@ -97,7 +96,8 @@ $result = $db->query($query);
         $db->close();
         ?>
 
-
+    <br>
+    <a href="view_books.php" class="btn btn-secondary mb-4"><i class="bi bi-caret-left-fill"></i>&nbsp;Back</a>
     </div>
 </div>
 
