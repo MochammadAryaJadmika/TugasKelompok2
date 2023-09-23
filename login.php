@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
                 <div class="error"><?php if (isset($error_password)) echo $error_password ?></div>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary" name="submit" value="submit">Login</button>
+            <button type="submit" class="btn btn-dark" name="submit" value="submit">Login</button>
         </form>
     </div>
 </div>
