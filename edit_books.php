@@ -2,8 +2,6 @@
 require_once('./lib/db_login.php');
 $id = $_GET['id'];
 
-$title = $categoryid = $author = $price = '';
-
 if (!isset($_POST["submit"])) {
     $query = "SELECT * FROM books WHERE isbn = '" . $id . "'";
 
@@ -100,7 +98,7 @@ if (!isset($_POST["submit"])) {
             </div>
 
             <br>
-            <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
+            <button type="submit" class="btn btn-primary" name="submit" value="submit">Edit</button>
             <a href="view_books.php" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
