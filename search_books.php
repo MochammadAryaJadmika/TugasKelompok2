@@ -119,7 +119,7 @@ $result = $db->query($query);
                     </td>
                 </tr>
         </table>
-        <button type="submit" class="btn btn-primary" name="submit" value="submit">Search</button>
+        <button type="submit" class="btn btn-primary" name="submit" value="submit"><i class="bi bi-search"></i>&nbsp; Search</button>
         </form>
 
         <br>
@@ -152,6 +152,8 @@ $result = $db->query($query);
         $db->close();
         ?>
 
+    <br>
+    <a href="view_books.php" class="btn btn-primary mb-4"><i class="bi bi-caret-left-fill"></i>&nbsp;Back</a>
     </div>
 </div>
 <?php include('./footer.php') ?>
