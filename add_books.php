@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="error"><?php if (isset($error_price)) echo $error_price ?></div>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary">Add Book</button>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-plus"></i>&nbsp;Add Book</button>
             <a href="view_books.php" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
