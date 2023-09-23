@@ -117,7 +117,7 @@ $db->close();
         });
         </script>
     <br>
-    <a href="view_books.php" class="btn btn-primary mb-4"> <i class="bi bi-caret-left-fill"></i>&nbsp;Back</a>
+    <a href="view_books.php" class="btn btn-secondary mb-4"> <i class="bi bi-caret-left-fill"></i>&nbsp;Back</a>
     </div>
         <?php include('./footer.php') ?>
 </html>
