@@ -13,7 +13,7 @@ if (isset($_GET['id'])) {
         die("Could not query the database: <br />" . $db->error . "<br>Query: " . $query);
     } else {
         $db->close();
-        header('Location: detail_books.php');
+        header('Location: search_books.php');
     }
 }
 ?>
