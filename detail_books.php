@@ -77,12 +77,12 @@ include('./header.php');
                     $error_review = "Review is required";
                 } else {
                     // Perhatikan penggunaan prepared statement untuk menghindari SQL injection
-                    $queryReviews = "INSERT INTO book_reviews (isbn, review) VALUES (?, ?)";
+                    $queryReviews = "INSERT INTO book_reviews (isbn, review) VALUES (?, ?) ON DUPLICATE KEY UPDATE review = ?";
                     $stmtReviews = $db->prepare($queryReviews);
 
                     if ($stmtReviews) {
                         // Binding parameter
-                        $stmtReviews->bind_param("ss", $isbn, $review);
+                        $stmtReviews->bind_param("sss", $isbn, $review, $review);
 
                         // Jalankan query
                         if ($stmtReviews->execute()) {
